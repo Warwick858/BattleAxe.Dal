@@ -2,12 +2,16 @@
 
 ## Application Name: BattleAxe.Dal ##
 
-* Solution Types: .NET Web Core
+* Framework: .NET Web Core 3.1
 
-* Description: web service for the data access layer.
+* Solution Type(s): .NET Web, Class Library
+
+* Description: bare-bones web service for the data access layer.
 
 * Nuget Packages:
 	* Dapper - 2.0.30
-	* Serilog.AspNetCore - 3.1.0
+	* Serilog - 2.9.1-dev-01154
+	* Serilog.Sinks.File - 4.1.0
 	* Swashbuckle.AspNetCore - 5.0.0-rc4
 	* Swashbuckle.AspNetCore.Annotations - 5.0.0-rc4
+	* System.Data.SqlClient - 4.8.0
