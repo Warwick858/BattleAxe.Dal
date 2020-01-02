@@ -2,7 +2,7 @@
 
 ## Application Name: BattleAxe.Dal ##
 
-* Framework: .NET Web Core 3.1
+* Framework: .NET Core 3.1
 
 * Solution Type(s): .NET Web, Class Library
 
