@@ -28,10 +28,10 @@
 //
 using BattleAxe.Dal.Common.Model;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using Serilog;
 using Swashbuckle.AspNetCore.Annotations;
 using System;
+using System.Text.Json;
 
 namespace BattleAxe.Dal.Api.Controllers
 {
@@ -59,7 +59,7 @@ namespace BattleAxe.Dal.Api.Controllers
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Failed to perform GET!");
-				return BadRequest($"GET failed! Exception: {JsonConvert.SerializeObject(ex)}");
+				return BadRequest($"GET failed! Exception: {JsonSerializer.Serialize(ex)}");
 			}
 		}
 
@@ -76,8 +76,8 @@ namespace BattleAxe.Dal.Api.Controllers
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Failed to perform POST!");
-				return BadRequest($"POST failed using request: {JsonConvert.SerializeObject(request)}! " +
-					$"Exception: {JsonConvert.SerializeObject(ex)}");
+				return BadRequest($"POST failed using request: {JsonSerializer.Serialize(request)}! " +
+					$"Exception: {JsonSerializer.Serialize(ex)}");
 			}
 		} // end method
 	} // end class

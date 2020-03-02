@@ -95,6 +95,12 @@ namespace BattleAxe.Dal.Api
 				app.UseHsts();
 
 			app.UseStaticFiles();
+			app.UseHttpsRedirection();
+			app.UseRouting();
+			app.UseEndpoints(endpoints =>
+			{
+				endpoints.MapControllers();
+			});
 			app.UseSwagger();
 			app.UseSwaggerUI(c =>
 			{
